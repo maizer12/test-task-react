@@ -1,20 +1,15 @@
-import Cards from './components/Cards'
 import './assets/style/null.scss'
-import ButtonMain from './components/UI/ButtonMain'
-import { useRecipe } from './store'
+import { Route, Routes } from 'react-router-dom'
+import HomePage from './pages/HomePage'
+import ProductPage from './pages/ProductPage'
 
 function App() {
-	const { clearElem, selectedRecipes } = useRecipe()
-
-	const deleteCards = () => {
-		selectedRecipes.map(e => clearElem(e))
-	}
 	return (
 		<div className='App'>
-			<Cards />
-			{Boolean(selectedRecipes.length) && (
-				<ButtonMain onClick={deleteCards}>Clear</ButtonMain>
-			)}
+			<Routes>
+				<Route path='/' element={<HomePage />} />
+				<Route path='/product/:productId' element={<ProductPage />} />
+			</Routes>
 		</div>
 	)
 }

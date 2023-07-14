@@ -11,6 +11,11 @@
 	&:hover {
 		background-color: #a8a8a8;
 	}
+	&__num {
+		font-size: 21px;
+		margin-bottom: 10px;
+		color: black;
+	}
 	&__img {
 		max-width: 250px;
 		max-height: 300px;

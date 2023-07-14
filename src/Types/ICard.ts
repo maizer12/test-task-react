@@ -11,4 +11,8 @@ export default interface ICard {
 	target_og: number
 	ebc: number
 	srm: number
+	volume: {
+		value: number
+		unit: string
+	}
 }

@@ -1,18 +1,21 @@
 import create from 'zustand'
-import ICard from './Types/ICard'
+import ICard from './types/ICard'
 
 interface ICardState {
 	listRecipes: ICard[]
 	selectedRecipes: ICard[]
-	fetchRecipes: () => Promise<void>
+	page: number
+	fetchRecipes: (page: number) => Promise<void>
 	chooseSelected: (elem: ICard) => void
 	removeSelected: (elem: ICard) => void
 	clearElem: (elem: ICard) => void
+	deleteFiveElements: () => void
 }
 
 export const useRecipe = create<ICardState>(set => ({
 	listRecipes: [],
 	selectedRecipes: [],
+	page: 1,
 	chooseSelected: (elem: ICard) => {
 		set(state => ({
 			selectedRecipes: [...state.selectedRecipes, elem],
@@ -25,13 +28,24 @@ export const useRecipe = create<ICardState>(set => ({
 	},
 	clearElem: (elem: ICard) => {
 		set(state => ({
-			listRecipes: state.listRecipes.filter(e => e.id !== elem.id),
+			listRecipes: [...state.listRecipes.filter(e => e.id !== elem.id)],
 			selectedRecipes: [],
 		}))
 	},
-	fetchRecipes: async () => {
-		const result = await fetch('https://api.punkapi.com/v2/beers?page=1')
-		const json = (await result.json()) as ICard[]
-		set({ listRecipes: json })
+	deleteFiveElements: () => {
+		set(state => ({
+			listRecipes: [...state.listRecipes.slice(5)],
+		}))
+	},
+	fetchRecipes: async (page: number) => {
+		try {
+			const result = await fetch(
+				'https://api.punkapi.com/v2/beers?page=' + page
+			)
+			const json = (await result.json()) as ICard[]
+			set(state => ({ listRecipes: [...state.listRecipes, ...json] }))
+		} catch {
+			alert('Error')
+		}
 	},
 }))
