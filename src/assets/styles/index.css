@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul,
+li {
+	list-style: none;
+}
+button {
+	cursor: pointer;
+}
+body {
+	background-color: #f7f7f7;
+}
+.title {
+	color: rgb(0, 0, 0);
+	font-family: Roboto;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 56px;
+	letter-spacing: 0%;
+	text-align: left;
+}
+.container {
+	max-width: 1460px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.btn {
+	color: rgb(255, 255, 255);
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 100%;
+	letter-spacing: 0.5px;
+	text-align: left;
+	padding: 18px 32px;
+}

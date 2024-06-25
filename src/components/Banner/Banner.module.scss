@@ -1,0 +1,48 @@
+.banner {
+	background-image: url('../../assets/images/banner.jpeg');
+	background-size: cover;
+	height: 100vh;
+	max-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		min-width: 120%;
+		height: 475px;
+		background-size: cover;
+		left: -143px;
+		background-image: url('../../assets/images/bg-bottom.png');
+		bottom: -400px;
+	}
+}
+.title {
+	color: rgb(255, 255, 255);
+	font-family: Roboto;
+	font-size: 84px;
+	font-weight: 700;
+	line-height: 110%;
+	letter-spacing: 0%;
+	text-align: left;
+	max-width: 843px;
+}
+.buttons {
+	margin-top: 48px;
+	display: flex;
+	column-gap: 39px;
+}
+.sign {
+	box-sizing: border-box;
+	border: 2px solid rgb(14, 125, 185);
+	background: rgb(14, 125, 185);
+}
+.contact {
+	background: none;
+	box-sizing: border-box;
+	border: 2px solid rgb(255, 255, 255);
+}
