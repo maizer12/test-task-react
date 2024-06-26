@@ -21,3 +21,147 @@
 	text-align: left;
 	text-decoration-line: underline;
 }
+.footer-top {
+	padding: 30px 0;
+	background-color: #ededed;
+	border-top: 1px solid rgba(#000000, 0.1);
+
+	.inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	p {
+		color: rgb(44, 44, 44);
+		font-family: Roboto;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 140%;
+		letter-spacing: 0%;
+		text-align: left;
+	}
+
+	label {
+		display: flex;
+		height: 50px;
+		max-width: 360px;
+		width: 100%;
+
+		input {
+			flex: 1 1 auto;
+			padding: 16px;
+			font-family: Roboto;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 100%;
+			letter-spacing: 0%;
+			text-align: left;
+			border: 1px solid rgb(227, 227, 227);
+
+			&::placeholder {
+				color: rgb(132, 132, 132);
+				transition: 0.4s;
+			}
+
+			&:focus {
+				&::placeholder {
+					opacity: 0;
+				}
+			}
+		}
+
+		button {
+			background: rgb(14, 125, 185);
+			display: flex;
+			width: 50px;
+			justify-content: center;
+			align-items: center;
+			transition: 0.4s;
+			border: none;
+		}
+
+		button:hover {
+			background: rgb(14, 111, 163);
+		}
+	}
+}
+.footer {
+	padding-top: 77px;
+	padding-bottom: 32px;
+
+	.columns {
+		display: flex;
+
+		.column {
+			width: 199px;
+
+			a {
+				color: rgb(68, 68, 68);
+				font-family: Roboto;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 140%;
+				letter-spacing: 0%;
+				text-align: left;
+				margin-bottom: 12px;
+				display: block;
+			}
+		}
+	}
+
+	.inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	h5 {
+		color: rgb(44, 44, 44);
+		font-family: Roboto;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 140%;
+		letter-spacing: 0%;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+
+	.contact {
+		.link {
+			font-family: Roboto;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 140%;
+			letter-spacing: 0%;
+			text-align: left;
+			display: block;
+			margin-bottom: 8px;
+		}
+
+		.link-blue {
+			color: #0e7db9;
+		}
+	}
+
+	.icons {
+		display: flex;
+		column-gap: 10px;
+		margin-top: 29px;
+
+		.icon {
+			border: 1px solid #f1f1f1;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			transition: 0.6s;
+
+			&:hover {
+				border: 1px solid #c2c2c2;
+			}
+		}
+	}
+}
