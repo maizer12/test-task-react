@@ -7,6 +7,31 @@
 }
 .card {
 	max-width: 300px;
+
+	.stars {
+		display: flex;
+		column-gap: 5.31px;
+	}
+
+	.rating {
+		display: flex;
+		column-gap: 13px;
+		align-items: center;
+
+		p {
+			font-family: Roboto;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: -1px;
+			letter-spacing: 0px;
+			text-align: left;
+			color: black;
+
+			span {
+				opacity: 0.6;
+			}
+		}
+	}
 }
 .products {
 	display: flex;
@@ -44,4 +69,7 @@
 }
 .btn {
 	margin: 0 auto;
+}
+.star {
+	column-gap: 24px;
 }

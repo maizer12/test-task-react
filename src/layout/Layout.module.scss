@@ -1,10 +1,37 @@
 .header {
 	position: absolute;
-	display: flex;
-	justify-content: center;
+
 	width: 100%;
-	padding-top: 70px;
+	padding-top: 50px;
 	z-index: 20;
+
+	.header-inner,
+	.right {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 35px;
+	}
+
+	.header-buttons {
+		display: flex;
+		column-gap: 22px;
+
+		a {
+			width: 40px;
+			height: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			transition: 0.4s;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
 }
 .menu {
 	display: flex;
@@ -14,12 +41,16 @@
 .menu a {
 	color: rgb(255, 255, 255);
 	font-family: Roboto;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 700;
 	line-height: 100%;
 	letter-spacing: 0%;
+	text-decoration: none;
 	text-align: left;
-	text-decoration-line: underline;
+
+	.active {
+		text-decoration-line: underline;
+	}
 }
 .footer-top {
 	padding: 30px 0;

@@ -6,7 +6,8 @@ ul,
 li {
 	list-style: none;
 }
-button {
+button,
+a {
 	cursor: pointer;
 }
 body {
